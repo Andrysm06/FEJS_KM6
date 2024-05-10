@@ -1,0 +1,898 @@
+iya <!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Binar Car Rental</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* body {
+            overflow-x: hidden;
+        } */
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Binar Car Rental</a>
+        <button
+          class="btn btn-success d-md-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasExample"
+          aria-labelledby="offcanvasExampleLabel"
+        >
+          <div class="offcanvas-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#our-services">Our Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#why-us">Why Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonial">Testimonial</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-success" href="./sign/register.html"
+                  >Register</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <style>
+      nav.navbar {
+        background-color: #f1f3ff;
+      }
+
+      .navbar-brand {
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+      }
+
+      .offcanvas-body ul li a {
+        color: #646464;
+        margin: 0 10px;
+        font-weight: bold;
+      }
+
+      .offcanvas-body ul li a:hover:not(.btn) {
+        color: #0d28a6;
+      }
+    </style>
+
+    <div class="main-section pt-md-5">
+      <div class="bg-car"></div>
+      <div class="container h-100 d-flex pt-md-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-6 tagline py-5">
+            <h2>sewa &amp; rental mobil terbaik dikawasan bogor</h2>
+            <p>
+              Selamat datang di Binar Car Rental. Kami menyediakan mobil
+              kualitas terbaik dengan harga terjangkau. Selalu siap melayani
+              kebutuhanmu untuk sewa mobil selama 24 jam.
+            </p>
+            <a href="#" class="btn btn-success">Mulai Sewa Mobil</a>
+          </div>
+          <div class="col-md-6 img-car py-5">
+            <img
+              src="./img/Mercedes Car EQC 300kW Edition - 900x598 1.png"
+              alt=""
+              class="w-100"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .main-section {
+        height: 100vh;
+        background-color: #f1f3ff;
+        position: relative;
+      }
+
+      .bg-car::before {
+        content: "";
+        position: absolute;
+        background-color: #0d28a6;
+        bottom: 0;
+        right: 0;
+        height: 50%;
+        width: 50%;
+        border-radius: 100px 0 0 0;
+      }
+
+      .tagline h2,
+      .tagline a {
+        margin: 24px 0;
+        text-transform: capitalize;
+        font-weight: bold;
+      }
+
+      .btn.btn-success {
+        border: 1px solid #5cb85f;
+        color: #ffffff;
+        box-shadow: 1px 10px 30px -10px #5cb85f;
+        display: inline-block;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+
+      .btn.btn-success:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #5cb85f;
+        z-index: -2;
+      }
+
+      .btn.btn-success:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: #ffffff;
+        transition: all 0.3s;
+        z-index: -1;
+      }
+
+      .btn.btn-success:hover {
+        color: #5cb85f;
+      }
+
+      .btn.btn-success:hover:before {
+        width: 100%;
+      }
+    </style>
+
+    <div class="our-services py-5" id="our-services">
+      <div class="container py-5">
+        <div class="row">
+          <div
+            class="col-md-6 d-flex justify-content-center align-items-center"
+          >
+            <img src="./img/Happy Girl - 961x1443 2.png" alt="img_service" />
+          </div>
+          <div
+            class="col-md-6 d-flex justify-content-center align-items-start flex-column my-5"
+          >
+            <h3 style="font-weight: bold">
+              Best Car Rental for any kind of trip in bogor!
+            </h3>
+            <p>
+              Sewa mobil di (Lokasimu) bersama Binar Car Rental jaminan harga
+              lebih murah dibandingkan yang lain, kondisi mobil baru, serta
+              kualitas pelayanan terbaik untuk perjalanan wisata, bisnis,
+              wedding, meeting, dll.
+            </p>
+            <div class="custom-list">
+              <p class="custom-text pe-2">
+                <i class="bi bi-check-lg me-3"></i>Sewa Mobil Dengan Supir di
+                Bali 12 Jam
+              </p>
+              <p class="custom-text-2 pe-2">
+                <i class="bi bi-check-lg me-3"></i>Sewa Mobil Lepas Kunci di
+                Bali 24 Jam
+              </p>
+              <p class="custom-text pe-2">
+                <i class="bi bi-check-lg me-3"></i>Sewa Mobil Jangka Panjang
+                Bulanan
+              </p>
+              <p class="custom-text pe-2">
+                <i class="bi bi-check-lg me-3"></i>Gratis Antar - Jemput Mobil
+                di Bandara
+              </p>
+              <p class="custom-text pe-2">
+                <i class="bi bi-check-lg me-3"></i>Layanan Airport Transfer /
+                Drop In Out
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .d-flex p .bi-check-lg {
+        background-color: #cfd4ed;
+        color: #0d28a6;
+        border-radius: 15px;
+        padding: 3px 5px;
+      }
+    </style>
+
+    <div class="why-us py-5" id="why-us">
+      <div class="container py-5">
+        <h3 style="font-weight: bold">Why Us?</h3>
+        <p>Mengapa harus pilih Binar Car Rental?</p>
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-3 my-2">
+            <div class="card">
+              <div class="card-body yellow">
+                <i class="bi bi-hand-thumbs-up"></i>
+                <p>Mobil Lengkap</p>
+                <p>
+                  Tersedia banyak pilihan mobil, kondisi masih baru, bersih dan
+                  terawat
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 my-2">
+            <div class="card">
+              <div class="card-body red">
+                <i class="bi bi-tag"></i>
+                <p>Harga Murah</p>
+                <p>
+                  Harga murah dan bersaing, bisa bandingkan harga kami dengan
+                  rental mobil lain
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 my-2">
+            <div class="card">
+              <div class="card-body blue">
+                <i class="bi bi-clock"></i>
+                <p>Layanan 24 Jam</p>
+                <p>
+                  Siap melayani kebutuhan Anda selama 24 jam nonstop. Kami juga
+                  tersedia di akhir minggu
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-3 my-2">
+            <div class="card">
+              <div class="card-body green">
+                <i class="bi bi-award"></i>
+                <p>Sopir Profesional</p>
+                <p>
+                  Sopir yang profesional, berpengalaman, jujur, ramah dan selalu
+                  tepat waktu
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .why-us .card-body {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        cursor: pointer;
+        transition: 0.5s ease;
+        overflow: hidden;
+      }
+
+      .why-us .card-body.yellow:hover * {
+        z-index: 9;
+        color: white;
+      }
+
+      .why-us .card-body.yellow::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        border-radius: 1px;
+        width: 100%;
+        height: 100%;
+        background-color: #f9cc00;
+        transition: 0.5s ease;
+        clip-path: circle(7% at 32.3px 34.3px);
+      }
+
+      .why-us .card-body:hover.yellow::before {
+        clip-path: circle(100%);
+        border-radius: 5px;
+      }
+
+      .why-us .card-body.red:hover * {
+        z-index: 9;
+        color: white;
+      }
+
+      .why-us .card-body.red::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        border-radius: 1px;
+        width: 100%;
+        height: 100%;
+        background-color: #fa2c5a;
+        transition: 0.5s ease;
+        clip-path: circle(7% at 32.3px 34.3px);
+      }
+
+      .why-us .card-body:hover.red::before {
+        clip-path: circle(100%);
+        border-radius: 5px;
+      }
+
+      .why-us .card-body.blue:hover * {
+        z-index: 9;
+        color: white;
+      }
+
+      .why-us .card-body.blue::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        border-radius: 1px;
+        width: 100%;
+        height: 100%;
+        background-color: #0d28a6;
+        transition: 0.5s ease;
+        clip-path: circle(7% at 32.3px 34.3px);
+      }
+
+      .why-us .card-body:hover.blue::before {
+        clip-path: circle(100%);
+        border-radius: 5px;
+      }
+
+      .why-us .card-body.green:hover * {
+        z-index: 9;
+        color: white;
+      }
+
+      .why-us .card-body.green::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        border-radius: 1px;
+        width: 100%;
+        height: 100%;
+        background-color: #5cb85f;
+        transition: 0.5s ease;
+        clip-path: circle(7% at 32.3px 35.3px);
+      }
+
+      .why-us .card-body:hover.green::before {
+        clip-path: circle(100%);
+        border-radius: 5px;
+      }
+
+      .why-us .card-body p:nth-child(2) {
+        margin-top: 5%;
+        font-weight: 600;
+        font-size: 17px;
+      }
+
+      .why-us .card-body .bi {
+        color: white;
+        font-size: 20px;
+        border-radius: 20px;
+        padding: 3px 6px;
+        z-index: 1;
+      }
+    </style>
+
+    <div class="testimonial py-5" id="testimonial">
+      <div class="text-center pt-3">
+        <h3 style="font-weight: bold">Testimonial</h3>
+        <p>Berbagai review positif dari para pelanggan kami</p>
+      </div>
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="container">
+          <div class="carousel-inner">
+            <div class="carousel-item active py-3 p-md-4">
+              <div class="card p-5">
+                <div class="card-body p-0 py-md-5">
+                  <div class="row">
+                    <div class="col-md-4 text-center text-md-end">
+                      <img
+                        src="./img/img_photo.png"
+                        alt=""
+                        class="rounded-circle img-thumbnail"
+                      />
+                    </div>
+                    <div class="col-md-8 text-center text-md-start">
+                      <div
+                        class="d-flex flex-row justify-content-center justify-content-md-start my-3"
+                      >
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <p class="pe-md-5">
+                        Lorem ipsum dolor sit arly consectetur adipisicing elit.
+                        Quo itaque dicta nostrum laboriosam quisquam! Iure,
+                        officiis! Praesentium ullam laudantium, tempore
+                        reiciendis delectus aut? Quaerat, dolor.
+                      </p>
+                      <p class="fw-bold">John Dee 32, Bromo</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item py-3 p-md-4">
+              <div class="card p-5">
+                <div class="card-body p-0 py-md-5">
+                  <div class="row">
+                    <div class="col-md-4 text-center text-md-end">
+                      <img
+                        src="./img/img_photo.png"
+                        alt=""
+                        class="rounded-circle img-thumbnail"
+                      />
+                    </div>
+                    <div class="col-md-8 text-center text-md-start">
+                      <div
+                        class="d-flex flex-row justify-content-center justify-content-md-start my-3"
+                      >
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <p class="pe-md-5">
+                        Lorem ipsum dolor sit arly consectetur adipisicing elit.
+                        Quo itaque dicta nostrum laboriosam quisquam! Iure,
+                        officiis! Praesentium ullam laudantium, tempore
+                        reiciendis delectus aut? Quaerat, dolor.
+                      </p>
+                      <p class="fw-bold">John Dee 32, Bromo</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item py-3 p-md-4">
+              <div class="card p-5">
+                <div class="card-body p-0 py-md-5">
+                  <div class="row">
+                    <div class="col-md-4 text-center text-md-end">
+                      <img
+                        src="./img/img_photo.png"
+                        alt=""
+                        class="rounded-circle img-thumbnail"
+                      />
+                    </div>
+                    <div class="col-md-8 text-center text-md-start">
+                      <div
+                        class="d-flex flex-row justify-content-center justify-content-md-start my-3"
+                      >
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill me-1"></i>
+                        <i class="bi bi-star-fill"></i>
+                      </div>
+                      <p class="pe-md-5">
+                        Lorem ipsum dolor sit arly consectetur adipisicing elit.
+                        Quo itaque dicta nostrum laboriosam quisquam! Iure,
+                        officiis! Praesentium ullam laudantium, tempore
+                        reiciendis delectus aut? Quaerat, dolor.
+                      </p>
+                      <p class="fw-bold">John Dee 32, Bromo</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mb-4">
+          <button
+            class="carousel-control-prev position-relative d-flex justify-content-end mx-4"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <i class="bi bi-chevron-left"></i>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next position-relative d-flex justify-content-start mx-4"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <i class="bi bi-chevron-right"></i>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <style>
+      .banner .container {
+        background-color: #0d28a6;
+        border-radius: 13px;
+        color: white;
+        width: 100%;
+      }
+
+      .banner .container * {
+        margin: 16px 0;
+      }
+
+      .carousel-item .card {
+        background-color: #f1f3ff;
+        border: none;
+      }
+
+      .carousel-item .card .card-body img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .bi.bi-chevron-left,
+      .bi.bi-chevron-right {
+        background-color: white;
+        color: black;
+        font-size: 30px;
+        border: 1px solid black;
+        padding: 3px 10px;
+        border-radius: 35px;
+      }
+
+      .bi.bi-chevron-left:hover,
+      .bi.bi-chevron-right:hover {
+        background-color: #5cb85f;
+        border: 1px solid #5cb85f;
+        color: white;
+      }
+
+      .bi.bi-star-fill {
+        color: #f9cc00;
+      }
+
+      .carousel-item img {
+        transition: all 0.5s;
+      }
+
+      .carousel-item img:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+    </style>
+
+    <div class="banner py-5">
+      <div
+        class="container text-center py-5 d-flex justify-content-center align-items-center flex-column"
+      >
+        <h1 class="fw-bold">Sewa Mobil di (BOGOR) Sekarang</h1>
+        <p class="w-50">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <button class="btn btn-success">Mulai Sewa Mobil</button>
+      </div>
+    </div>
+
+    <div class="faq py-5" id="faq">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-6">
+            <h3 class="fw-bold">Frequently Asked Question</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          </div>
+          <div class="col-md-6">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+              <div class="card mb-3">
+                <div
+                  class="accordion-header accordion-button collapsed cursor-pointer rounded"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseButuh"
+                  aria-expanded="false"
+                  aria-controls="collapseButuh"
+                >
+                  <p>Apa saja syarat yang dibutuhkan?</p>
+                </div>
+                <div
+                  id="collapseButuh"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Lorem ipsum dolor sit arly consectetur adipisicing elit.
+                      Voluptatibus eligendi deleniti in tenetur distinctio
+                      repellendus ut quo dolorem dicta veniam!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div
+                  class="accordion-header accordion-button collapsed cursor-pointer rounded"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseKunci"
+                  aria-expanded="false"
+                  aria-controls="collapseKunci"
+                >
+                  <p>Berapa hari minimal sewa mobil lepas kunci?</p>
+                </div>
+                <div
+                  id="collapseKunci"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptatibus eligendi deleniti in tenetur distinctio
+                      repellendus ut quo dolorem dicta veniam!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div
+                  class="accordion-header accordion-button collapsed cursor-pointer rounded"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSewa"
+                  aria-expanded="false"
+                  aria-controls="collapseSewa"
+                >
+                  <p>Berapa hari sebelumnya sabaiknya booking sewa mobil?</p>
+                </div>
+                <div
+                  id="collapseSewa"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptatibus eligendi deleniti in tenetur distinctio
+                      repellendus ut quo dolorem dicta veniam!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div
+                  class="accordion-header accordion-button collapsed cursor-pointer rounded"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseAntar"
+                  aria-expanded="false"
+                  aria-controls="collapseAntar"
+                >
+                  <p>Apakah Ada biaya antar-jemput?</p>
+                </div>
+                <div
+                  id="collapseAntar"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptatibus eligendi deleniti in tenetur distinctio
+                      repellendus ut quo dolorem dicta veniam!
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-3">
+                <div
+                  class="accordion-header accordion-button collapsed cursor-pointer rounded"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseCelaka"
+                  aria-expanded="false"
+                  aria-controls="collapseCelaka"
+                >
+                  <p>Bagaimana jika terjadi kecelakaan?</p>
+                </div>
+                <div
+                  id="collapseCelaka"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Voluptatibus eligendi deleniti in tenetur distinctio
+                      repellendus ut quo dolorem dicta veniam!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style></style>
+
+    <div class="footer">
+      <div class="container pb-5">
+        <div class="row">
+          <div class="col-md-4">
+            <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+            <p>binarcarrental@gmail.com</p>
+            <p>081-233-334-808</p>
+          </div>
+          <div class="col-md-2 d-flex flex-column">
+            <a href="#our-services" class="text-decoration-none mb-3"
+              >Our services</a
+            >
+            <a href="#why-us" class="text-decoration-none mb-3">Why Us</a>
+            <a href="#testimonial" class="text-decoration-none mb-3"
+              >Testimonial</a
+            >
+            <a href="#faq" class="text-decoration-none mb-3">FAQ</a>
+          </div>
+          <div class="col-md-3">
+            <p>Connect with us</p>
+            <div class="d-flex mb-3">
+              <a href="https://facebook.com" target="_blank"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a href="https://instagram.com/andrysm06" target="_blank"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a href="https://twitter.com" target="_blank"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a href="https://mail.google.com" target="_blank"
+                ><i class="bi bi-envelope"></i
+              ></a>
+              <a href="https://twitch.com" target="_blank"
+                ><i class="bi bi-twitch"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <p>Copyright Binar &copy; 2024</p>
+            <a
+              class="text-decoration-none mb-3"
+              href="#"
+              style="
+                font-weight: bold;
+                color: black;
+                text-transform: uppercase;
+                :hover:not(.btn) {
+                  color: #0d28a6;
+                }
+              "
+            >
+              Binar Car Rental</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+      .cursor-pointer {
+        cursor: pointer;
+        color: black;
+      }
+
+      .footer .bi {
+        background-color: #0d28a6;
+        margin-right: 16px;
+        border-radius: 15px;
+        padding: 5px 7px;
+        font-size: 18px;
+        color: white;
+        border: 1px solid #0d28a6;
+      }
+
+      .footer .col-md-2 a {
+        color: black;
+        font-weight: bold;
+      }
+
+      .footer .col-md-2 a:hover {
+        color: #0d28a6;
+      }
+
+      .footer .bi:hover {
+        background-color: white;
+        border: 1px solid #0d28a6;
+        color: #0d28a6;
+        transition: 0.5s ease;
+      }
+
+      @media (max-width: 990px) {
+        .main-section {
+          height: auto;
+        }
+
+        .navbar-nav a:hover:not(.btn)::before {
+          content: "> ";
+        }
+
+        .navbar-nav a:hover:not(.btn)::after {
+          content: " <";
+        }
+
+        .navbar-nav a:hover {
+          border-bottom: none !important;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .bg-car::before {
+          height: 30%;
+          width: 90%;
+        }
+      }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      gsap.from(".main-section img", { duration: 1, x: 100, opacity: 0 });
+      gsap.from(".main-section span", { duration: 1, y: 100, opacity: 0 });
+      gsap.from(".main-section .tagline", { duration: 1, x: -100, opacity: 0 });
+    </script>
+  </body>
+</html>
